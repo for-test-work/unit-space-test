@@ -31,7 +31,7 @@ export class GiphyComponent implements OnInit, OnDestroy {
               private router: Router,
               private route: ActivatedRoute) {
     // todo... Misha
-    this.currentPageUrlParam = this.route.snapshot.params['page'];
+    this.currentPageUrlParam = this.route.snapshot.params['page'] | 1;
   }
 
 
@@ -45,7 +45,7 @@ export class GiphyComponent implements OnInit, OnDestroy {
   foundItems: Array<GiphyItem> = [];
 
   currentSearchUrlParam = '';
-  currentPageUrlParam = 1;
+  currentPageUrlParam: number;
 
   ngOnInit(): void {
     this.currentSearchUrlParam = this.route.snapshot.params['search'];

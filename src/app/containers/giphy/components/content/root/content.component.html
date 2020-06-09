@@ -1,8 +1,8 @@
-<div class="wrapper">
-  <div *ngFor="let item of items" class="items-wrapper">
+<div class="wrapper row">
+  <div *ngFor="let item of items" class="col-md-4 items-wrapper">
 
 
-      <app-item [itemProps]="item" class="float-left"></app-item>
+      <app-item [itemProps]="item"></app-item>
 
   </div>
 </div>
